@@ -1,0 +1,454 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+@font-face {
+	font-family: 'Kristen ITC';
+	src: url('../fonts/ITCKRIST.ttf') format('truetype')
+}
+
+:root{
+	--bg_color: rgb(10, 10, 30);
+	--text_c: #fff;
+	--h_text_c: #6a5baa;
+	--nav_height: 400px;
+	--new_size: 10px;
+	--nav_color: rgba(20, 20, 20, 0.9);
+	--button_color: #261d4c;
+}
+
+body{
+	background-color: var(--bg_color);
+}
+
+/*home screen spec*/
+
+.name_of_the_store.small{
+	font-size: 17px;
+	text-decoration: underline;
+}
+.our_button_list{
+	font-size: 10px;
+	font-family: sans-serif;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+.our_button_list>li{
+	text-align: center;
+	padding: 10px;
+	background-color: var(--button_color);
+	border-radius: 15% 0% 15% 0%;
+	width: 100px;
+	margin: 20px 10px 20px 10px;
+}
+.our_button_list>li>a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.heading{
+	z-index: -1;
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+}
+
+.heading_txt{
+	color: #fff;
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 16px;
+	text-align: center;
+}
+
+/*general stuff*/
+
+.name_of_the_store>a{
+	font-size: 20px;
+	text-decoration: none;
+	font-family: 'Kristen ITC';
+	color: var(--h_text_c);
+	cursor: pointer;
+}
+
+.menu>ul>li{
+	display: block;
+	font-family: sans-serif;
+	margin-right: 20px;
+	font-size: 12px;
+	padding: 20px;
+}
+.menu>ul{
+	padding: 40px 0px 40px 0px;
+}
+
+.menu>ul>li>a{
+	font-size: 12px;
+	text-decoration: none;
+	color: var(--text_c);
+}
+
+
+.menu>ul>li>a:hover{
+	color: var(--h_text_c);
+}
+
+
+.logo{
+	margin: 20px;
+}
+
+.trend{
+	justify-items: center;
+}
+
+.trend>div{
+	display: grid;
+	grid-template-columns: 0.3fr 0.9fr;
+	grid-template-rows: 0.3fr 0.5fr;
+	grid-template-areas:
+        'img title'
+        'img txt';
+
+	color: #fff;
+	font-family: sans-serif;
+}
+
+.trend>div>h2{
+	margin: 20px;
+	grid-area: title;
+}
+
+.trend>div>img{
+	display: block;
+	grid-area: img;
+	margin: 20px;
+	width: 30vw;
+	height: 35vw;
+	transition: transform 200ms;
+}
+.none_sense{
+	grid-area: txt;
+}
+
+
+.trend>div>img:hover{
+	transform: scale(1.12, 1.12);
+	-ms-transform: scale(1.12, 1.12);
+	-webkit-transform: scale(1.12, 1.12);
+	box-shadow: #000 0px 0px 16px 2px;
+}
+
+
+.nav>*{
+	display: none;
+}
+
+
+.menu{
+	position: fixed;
+	background-color: var(--nav_color);
+	height: 100vh;
+	width: 40vw;
+	right: -40vw;
+	top: 0px;
+	transition: 200ms ease-in-out;
+}
+
+.menu.active{
+	right: 0px;
+	z-index: 0;
+}
+
+
+.mobile_menu>span{
+	width: 20px;
+	height: 2px;
+	background-color: #fff;
+	display: block;
+	margin: 3px;
+}
+
+.mobile_menu{
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 6px;
+	border-radius: 10%;
+	z-index: 1;
+	right: 2vw;
+	margin: 10px;
+}
+
+
+/*about us*/
+
+.about_us{
+	color: #fff;
+	font-family: sans-serif;
+	position: absolute;
+	top: 100vh;
+}
+.about_us>*{
+	margin: 5px;
+	margin-left: 5px;
+}
+.spec{
+	font-size: 16px;
+}
+
+.hey{
+	font-size: 12px !important;
+}
+.about_us>p{
+	font-style: italic;
+	width: 50%;
+}
+.about_us>p>span{
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.mention{
+	font-weight: bolder;
+}
+
+.msg{
+	background-color: var(--bg_color);
+	outline-color: var(--button_color);
+	color: #fff;
+	font-size: 11px;
+	font-family: cursive;
+	border-radius: 2%;
+	width: 80%;
+}
+
+.submit{
+	display: block;
+	color: #fff;
+	background-color: transparent;
+	padding: 10px;
+	border: none;
+	border-bottom: #fff 2px solid;
+	transition: border-bottom-color 1s;
+}
+
+.submit:hover{
+	border-bottom-color: red;	
+}
+
+/*footer*/
+
+footer{
+	position: absolute;
+	background-color: var(--nav_color);
+	width: 100%;
+	height: 30px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	font-size: 0.7em;
+	margin-top: 20px;
+	margin-left: 0px !important;
+}
+
+
+
+/*media Q*/
+
+@media(min-width: 750px){
+
+	.hey{
+		font-size: 18px !important;
+	}
+
+	.name_of_the_store.small{
+		font-size: 32px;
+	}
+	.our_button_list{
+		font-size: 18px;
+	}
+	.our_button_list>li{
+		width: 25%;
+	}
+
+
+	.heading_txt{
+		font-size: 30px;
+	}
+
+	.head{
+		padding: 0px !important;
+	}
+
+	.menu{
+		background-color: transparent;
+		position: unset;
+		height: unset;
+	}
+
+	.menu>ul>li{
+		padding: 5px !important;
+	}
+
+	.name_of_the_store>a{
+		font-size: 40px;
+	}
+
+	.games{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.trend{
+		display: grid;
+	   	gap: 15px;
+	   	grid-template-columns: auto auto auto;
+	   	width: 80vw;
+	}
+
+	.trend>div>img{
+		z-index: 1;
+		width: 20vw;
+		height: 25vw;
+		transition: width ,height 200ms,200ms;
+	}
+
+	.nav{
+		display: initial;
+		top: 0px;
+		z-index: 2;
+		position: fixed;
+		background-color: transparent;
+		height: 100vh;
+		width: var(--nav_height);
+		left: -390px;
+		transition: 700ms cubic-bezier(0.15, -1, 0.25, 3);
+	}
+
+
+	.nav.active{
+		background-color: var(--nav_color);
+		left: -150px;
+	}
+
+	.nav>.text{
+		display: inherit;
+		padding-left: 210px;
+		padding-top: 10px;
+		color: #fff;
+		font-size: 20px;
+		font-family: monospace , sans-serif;
+		font-style: italic;
+	}
+
+	.nav>#arrow{
+		display: inherit;
+		cursor: pointer;
+		color: #fff;
+		font-size: 60px;
+		font-family: monospace;
+		font-weight: bolder;
+		float: right;
+		margin-top: calc(100vh/2 - 30px);
+		margin-right: -20px;
+		background-color: rgba(0, 0, 3, 0.2);
+		border-radius: 10%;
+		padding: 0px 5px 5px 5px;
+	}
+
+	.menu>ul>li{
+		margin: 0px;
+		display: inline-block;
+		font-size: 18px;
+	}
+	.trend>div>img{
+		width: 20vw;
+		height: 25vw;
+	}
+	.mobile_menu>span{
+		background-color: transparent;
+	}
+
+	.trend>div{
+		display: block;
+	}
+	.menu>ul>li>a{
+		font-size: unset;
+	}
+	.menu>ul{
+		margin-right: 60px;
+    	position: absolute;
+    	right: 0px;
+    	top: 0px;
+	}
+	/*deleting some stuff*/
+	.none_sense ,.menu>ul>li:last-child ,.mobile_menu{
+		display: none;
+	}
+	footer{
+		font-size: 1em;
+	}
+
+	/*about us*/
+
+	.about_us{
+		top: 100vh;
+	}
+	.about_us>*{
+		margin: 10px;
+		margin-left: 30px;
+	}
+	.spec{
+		font-size: 26px;
+	}
+
+	.about_us>p>span{
+		font-size: 20px;
+	}
+
+	.msg{
+		font-size: 16px;
+		width: 40%;
+	}	
+
+	.submit{
+		padding: 10px;
+	}
+
+}
+
+/*very small devices*/
+
+@media(max-width: 600px){
+	.head>.logo{
+		font-size: 12px;
+	}
+	.titles{
+		font-size: 10px;
+	}
+	.none_sense{
+		font-size: 8px;
+	}
+
+	.trend>div>img{
+		margin: 10px;
+	}
+	.menu>ul>li>a{
+		font-size: 9px;
+	}
+}
+
+
+
+
+
+
+
+
+

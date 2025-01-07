@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LoneStore</title>
+
+	<!--links-->
+	<link rel="stylesheet" href="./files/style.css">
+	<script type="text/javascript" src="./files/script.js" defer></script>
+</head>
+<body>
+	<!--navbar-->
+	<nav class="nav" id="nav">
+		<div id="arrow" onclick="expand_pc()">></div>
+		<h4 class="text">Downloads : </h4>
+	</nav>
+	<header class="head">
+		<div class="logo">
+			<h1 class="name_of_the_store">
+				<a href="./index.html">
+					LoneStore
+				</a>
+			</h1>
+		</div>
+		<!--menu-->
+		<!--for mobile-->
+			<div class="mobile_menu" id="mobile_menu"onclick="expand_mobile()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		<!--for pc-->
+		<div class="menu" id="menu">
+			<ul>
+			<li><a href="index.html">| Home</a></li>
+			<li><a href="./files/games.html">| Games</a></li>
+			<li><a href="#About_Us">| About Us</a></li>
+			<li><a href="#FeedBack">| FeedBack</a></li>
+			<li><a href="#" class="download_button_for_phone_users">| Downloads</a></li>
+		</ul>
+		</div>
+	</header>
+	<section class="content">
+		<div class="heading"><h1 class="heading_txt">Welcome to <span class="name_of_the_store small"><a href="index.html">LoneStore</a></span><br>Were Every Game Is Free !!</h1>
+			<ul class="our_button_list">
+				<li><a href="./files/games.html">Games</a></li>
+				<li><a href="#">Learn More</a></li>
+			</ul>
+		</div>
+		
+	</section>
+	<section class="about_us">
+		<h2 id="About_Us" class="spec">About Us : </h2>
+		<hr>
+		<p class="hey"><span>W</span>e are a company that targets the people who find their passion in video games . Our company Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias earum deserunt sunt beatae voluptate expedita vero harum placeat ipsum, eveniet illo sed exercitationem maiores voluptatibus omnis rerum minima odit eius.</p>
+		<img src="./img/lone_dev.jpg" alt="creator" style="width:100px;">
+		<span class="hey" style="display: block;">Follow me on facebook : <span class="mention">@Lone Dev</span> or <span class="mention">@Touzi Ghiles</span></span>
+		<h2 id="FeedBack" class="spec">Give Us Some FeedBack : </h2>
+		<textarea class="msg" cols="45" rows="15" placeholder="Enter Your FeedBack"></textarea><button class="submit">Submit </button>
+		<footer>
+			<span>Copyright : @LoneStudios</span>
+		</footer>
+	</section>
+</body>
+</html>
